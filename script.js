@@ -47,8 +47,8 @@ function applyTranslations() {
         }
     });
 
-    // Special catch for checkout-email if id doesn't match perfectly
-    const emailInput = document.getElementById('checkout-email');
+    // Special catch for lead-email if id doesn't match perfectly
+    const emailInput = document.getElementById('lead-email');
     if (emailInput && dict['lead-email-placeholder']) {
         emailInput.placeholder = dict['lead-email-placeholder'];
     }
@@ -93,8 +93,8 @@ function initCountdown() {
 // 3. CHECKOUT LOGIC (FIREBASE + REDIRECT)
 function initLeadForm() {
     const form = document.getElementById('checkout-form');
-    const emailInput = document.getElementById('checkout-email');
-    const submitBtn = document.getElementById('checkout-submit-btn');
+    const emailInput = document.getElementById('lead-email');
+    const submitBtn = document.getElementById('lead-submit-btn');
     const msgEl = document.getElementById('form-msg');
     const lang = new URLSearchParams(window.location.search).get('lang') || 'en';
     const dict = translations[lang] || translations['en'];
