@@ -1,0 +1,561 @@
+/* DESIGN SYSTEM: VIBECODING MASTER-SLIDE */
+
+:root {
+    /* Brand Colors - Sunset Amber */
+    --primary: #B45309;
+    /* Amber 700 */
+    --primary-light: #F59E0B;
+    /* Amber 500 */
+    --primary-dark: #7C2D12;
+    /* Amber 900 */
+
+    /* Dark Theme Palette */
+    --bg-deep: #020617;
+    /* Slate 950 */
+    --bg-surface: #0F172A;
+    /* Slate 900 */
+    --bg-glass: rgba(15, 23, 42, 0.7);
+
+    /* Text Color */
+    --text-primary: #F8FAFC;
+    /* Slate 50 */
+    --text-muted: #94A3B8;
+    /* Slate 400 */
+
+    /* Effects */
+    --shadow-amber: 0 10px 30px -10px rgba(180, 83, 9, 0.5);
+    --border-glass: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* Transitions */
+    --smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 1. RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 2. PRICE BANNER */
+.price-banner {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. NAVIGATION */
+header {
+    padding: 24px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.04em;
+    font-family: 'Outfit', sans-serif;
+    /* Branding usually uses Outfit or similar */
+}
+
+.logo span {
+    color: #F59E0B;
+    /* Match gold/amber */
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--smooth);
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* 4. BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--smooth);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    box-shadow: var(--shadow-amber);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px -10px rgba(180, 83, 9, 0.7);
+}
+
+.btn-xl {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+}
+
+.shadow-glow {
+    animation: glow-pulse 2s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    from {
+        box-shadow: 0 0 10px var(--primary);
+    }
+
+    to {
+        box-shadow: 0 0 30px var(--primary-light);
+    }
+}
+
+/* 5. HERO SECTION */
+.hero {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(180, 83, 9, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.badge {
+    background: rgba(180, 83, 9, 0.1);
+    color: var(--primary-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 900;
+}
+
+h1 span {
+    background: linear-gradient(to right, #F59E0B, #B45309);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+/* 6. BOOK VISUAL */
+.hero-visual {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.book-container {
+    width: 320px;
+    height: 480px;
+    position: relative;
+    transform: rotateY(-20deg) rotateX(10deg);
+    transition: var(--smooth);
+    cursor: pointer;
+}
+
+.book-container:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+}
+
+.book-cover-mockup {
+    width: 100%;
+    height: 100%;
+    background: #0a0a0a;
+    border-radius: 5px 15px 15px 5px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.book-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(180, 83, 9, 0.2) 0%, transparent 70%);
+    z-index: -1;
+}
+
+/* 7. PAINS GRID */
+.pains-section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.pains-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    border: var(--border-glass);
+    border-radius: 24px;
+    padding: 48px;
+    transition: var(--smooth);
+}
+
+.pain-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-10px);
+}
+
+.pain-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.pain-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.pain-card p {
+    color: var(--text-muted);
+}
+
+/* 8. METHOD SECTION */
+.method-section {
+    padding: 150px 0;
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.method-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 32px;
+}
+
+.method-text p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 1.1rem;
+}
+
+.check-list li::before {
+    content: '✓';
+    color: var(--primary-light);
+    font-weight: 900;
+    background: rgba(180, 83, 9, 0.1);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* PIPELINE VISUAL */
+.pipeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pipeline-step {
+    background: var(--bg-surface);
+    border: var(--border-glass);
+    padding: 16px 40px;
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    font-weight: 600;
+    transition: var(--smooth);
+}
+
+.pipeline-connector {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--primary), transparent);
+}
+
+.pipeline-step.success {
+    background: linear-gradient(135deg, #065f46, #064e3b);
+    border-color: #10b981;
+    color: white;
+}
+
+/* 9. LEAD SECTION */
+.lead-section {
+    padding: 100px 0;
+}
+
+.lead-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lead-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.lead-card p {
+    margin-bottom: 40px;
+    color: var(--text-muted);
+}
+
+.email-form .input-group {
+    display: flex;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.email-form input {
+    flex: 1;
+    padding: 18px 24px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: var(--border-glass);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.email-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 10. CTA SECTION */
+.cta-section {
+    padding: 150px 0;
+}
+
+.price-box {
+    margin: 40px 0;
+}
+
+.price {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+}
+
+.price span {
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.price-strikethrough {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+/* 11. FOOTER */
+footer {
+    padding: 80px 0;
+    border-top: var(--border-glass);
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+/* 12. RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-btns,
+    .email-form .input-group,
+    .pains-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btns a,
+    .email-form input,
+    .email-form button {
+        width: 100%;
+    }
+
+    .pains-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .method-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .nav-links {
+        display: none;
+        /* Mobile Menu needed for production */
+    }
+}
+
+.form-msg {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.form-msg.success {
+    color: #10b981;
+}
+
+.form-msg.error {
+    color: #f43f5e;
+}

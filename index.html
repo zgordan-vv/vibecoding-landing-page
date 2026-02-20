@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Vibecoding: The Weekend App — Build Your MVP with AI</title>
+    <meta name="description"
+        content="A non-technical founder's guide to building real apps in a weekend. Stop waiting, start shipping.">
+
+    <!-- Open Graph / Meta Ads -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vibecoding: Build your MVP this weekend.">
+    <meta property="og:description"
+        content="Learn the system to build real apps with AI that you actually own. No agencies, no black boxes.">
+    <meta property="og:image" content="https://vibecoding.book/og-image.png"> <!-- Placeholder for future asset -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="price-banner" class="price-banner">
+        <span id="banner-text">Special Launch Price: $5 until March 1st. Then $20.</span>
+        <span id="countdown"></span>
+    </div>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">CodeHummus<span>.</span></div>
+            <nav>
+                <div class="nav-links">
+                    <a href="#about" id="nav-method">The Method</a>
+                    <a href="#stack" id="nav-stack">The Stack</a>
+                    <a href="#pricing" id="nav-buy-btn" class="btn btn-primary">Get the Book — $5</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="reveal">
+                        <span class="badge" id="hero-badge">A Non-Technical Founder's Guide</span>
+                        <h1 id="hero-title">Build your MVP <span>this weekend.</span></h1>
+                        <p class="lead" id="hero-lead">No dev agencies. No black-box platforms. No $10k bootcamps. Learn
+                            the system to build real apps with AI that you actually own.</p>
+                        <div class="hero-btns">
+                            <a href="#pricing" id="hero-primary-btn" class="btn btn-xl btn-primary">Start Building Now —
+                                $5</a>
+                            <a href="#about" id="hero-secondary-btn" class="btn btn-xl btn-outline">Watch the Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="book-container">
+                        <div class="glow"></div>
+                        <div class="book-spine"></div>
+                        <div class="book-cover-mockup">
+                            <img src="assets/cover-final.png" alt="Vibecoding Book Cover" class="book-cover-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAINS SECTION -->
+        <section id="pains" class="pains-section">
+            <div class="container text-center">
+                <h2 class="section-title" id="pains-title">Why you're still waiting</h2>
+                <div class="pains-grid">
+                    <div class="pain-card glass">
+                        <div class="pain-icon">⚠️</div>
+                        <h3 id="pain-1-title">Low-Code Trap</h3>
+                        <p id="pain-1-desc">"I don't trust the foundation. Will I have to rewrite everything when I
+                            scale?"</p>
+                    </div>
+                    <div class="pain-card glass">
+                        <div class="pain-icon">💸</div>
+                        <h3 id="pain-2-title">Education Scam</h3>
+                        <p id="pain-2-desc">Overpriced $1,000 courses run by charlatans that teach syntax, not
+                            solutions.</p>
+                    </div>
+                    <div class="pain-card glass">
+                        <div class="pain-icon">⚔️</div>
+                        <h3 id="pain-3-title">Technical Chaos</h3>
+                        <p id="pain-3-desc">Battling VPNs, GitHub errors, and Vercel deploys instead of building your
+                            idea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE METHOD SECTION -->
+        <section id="about" class="method-section">
+            <div class="container">
+                <div class="method-grid">
+                    <div class="method-text">
+                        <h2 id="method-title" class="reveal">The "Vibecoding" System</h2>
+                        <p id="method-lead" class="reveal">We don't teach you to code. We teach you to
+                            <strong>architect</strong>. Follow a granular, battle-tested pipeline to go from a blank
+                            page to a live URL.
+                        </p>
+                        <ul class="check-list">
+                            <li><strong id="method-list-1">Real Stack:</strong> <span id="method-list-1-sub">React +
+                                    Firebase + Vercel.</span></li>
+                            <li><strong id="method-list-2">PRD First:</strong> <span id="method-list-2-sub">Think like
+                                    an architect before laying bricks.</span></li>
+                            <li><strong id="method-list-3">Master-Slide:</strong> <span id="method-list-3-sub">Use
+                                    .cursorrules to keep AI logic consistent.</span></li>
+                            <li><strong id="method-list-4">Total Ownership:</strong> <span id="method-list-4-sub">Your
+                                    code, your server, your database.</span></li>
+                        </ul>
+                    </div>
+                    <div class="method-visual reveal">
+                        <div class="pipeline">
+                            <div class="pipeline-step"><span id="step-1">Idea</span></div>
+                            <div class="pipeline-connector"></div>
+                            <div class="pipeline-step"><span id="step-2">PRD</span></div>
+                            <div class="pipeline-connector"></div>
+                            <div class="pipeline-step"><span id="step-3">AI</span></div>
+                            <div class="pipeline-connector"></div>
+                            <div class="pipeline-step success"><span id="step-4">Live</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEAD GEN SECTION -->
+        <section id="lead-gen" class="lead-section">
+            <div class="container">
+                <div class="lead-card glass reveal">
+                    <h2 id="lead-form-title">Not ready to buy yet?</h2>
+                    <p id="lead-form-desc">Join 2,000+ founders. Get a free chapter and launch checklists delivered to
+                        your inbox.</p>
+                    <form id="email-form" class="email-form">
+                        <div class="input-group">
+                            <input type="email" id="lead-email" placeholder="Enter your email" required>
+                            <button type="submit" id="lead-submit-btn" class="btn btn-primary">Get Free Chapter</button>
+                        </div>
+                    </form>
+                    <p id="form-msg" class="form-msg"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section id="pricing" class="cta-section">
+            <div class="container text-center">
+                <div class="final-cta reveal">
+                    <h2 id="cta-title">Ready to launch?</h2>
+                    <p id="cta-desc">Get the full 100-page guide with prompts, screenshots, and step-by-step
+                        hand-holding.</p>
+                    <div class="price-box">
+                        <div class="price" id="cta-price">$5<span>.00</span></div>
+                        <div class="price-strikethrough">$20</div>
+                    </div>
+                    <a href="https://lava.top" class="btn btn-xl btn-primary shadow-glow" id="final-cta-btn">Get Instant
+                        Access</a>
+                    <p class="small" id="cta-footer">Secure payment via Lava.top</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">CodeHummus<span>.</span></div>
+                <p id="footer-author">By Viacheslav Zgordan</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://slavazgordan.help" id="footer-consult">Consulting</a>
+                <a href="#" id="footer-privacy">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (Compat) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

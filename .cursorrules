@@ -1,0 +1,16 @@
+# .cursorrules - Landing Page Project
+
+## Stack
+- Vanilla HTML5, CSS3, Vanilla JavaScript.
+- Fonts: Google Fonts (Playfair Display, Outfit).
+
+## Design Philosophy
+- **Rich Aesthetics:** Use glassmorphism and subtle gradients.
+- **Micro-animations:** Every button and card should have a hover state.
+- **Premium Feel:** Avoid generic colors. Use HSL values for harmony.
+
+## Guidelines
+- Follow the `LANDING_PAGE_PRD.md` strictly.
+- Ensure 100% mobile responsiveness.
+- Use Semantic HTML (header, section, footer).
+- No external libraries unless necessary (keep it fast).
