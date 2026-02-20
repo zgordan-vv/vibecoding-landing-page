@@ -70,8 +70,9 @@
                             <div class="book-content">
                                 <h2 class="book-title" id="book-cover-title">Vibecoding:<span><br>The Weekend App</span>
                                 </h2>
-                                <p class="book-tagline">A Non-Technical Founder's Guide to Building with AI</p>
-                                <div class="book-author">VIACHESLAV ZGORDAN</div>
+                                <p class="book-tagline" id="book-cover-tagline">A Non-Technical Founder's Guide to
+                                    Building with AI</p>
+                                <div class="book-author" id="book-author">VIACHESLAV ZGORDAN</div>
                             </div>
                         </div>
                     </div>
@@ -142,25 +143,7 @@
             </div>
         </section>
 
-        <!-- LEAD GEN SECTION -->
-        <section id="lead-gen" class="lead-section">
-            <div class="container">
-                <div class="lead-card glass reveal">
-                    <h2 id="lead-form-title">Not ready to buy yet?</h2>
-                    <p id="lead-form-desc">Join 2,000+ founders. Get a free chapter and launch checklists delivered to
-                        your inbox.</p>
-                    <form id="email-form" class="email-form">
-                        <div class="input-group">
-                            <input type="email" id="lead-email" placeholder="Enter your email" required>
-                            <button type="submit" id="lead-submit-btn" class="btn btn-primary">Get Free Chapter</button>
-                        </div>
-                    </form>
-                    <p id="form-msg" class="form-msg"></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA SECTION -->
+        <!-- CHECKOUT SECTION -->
         <section id="pricing" class="cta-section">
             <div class="container text-center">
                 <div class="final-cta reveal">
@@ -171,8 +154,17 @@
                         <div class="price" id="cta-price">$5<span>.00</span></div>
                         <div class="price-strikethrough">$20</div>
                     </div>
-                    <a href="https://lava.top" class="btn btn-xl btn-primary shadow-glow" id="final-cta-btn">Get Instant
-                        Access</a>
+
+                    <form id="checkout-form" class="email-form" style="max-width: 500px; margin: 2rem auto;">
+                        <p id="lead-form-desc" style="margin-bottom: 1rem; opacity: 0.8;">Enter your email to proceed to
+                            secure checkout.</p>
+                        <div class="input-group">
+                            <input type="email" id="checkout-email" placeholder="Enter your email" required>
+                            <button type="submit" id="checkout-submit-btn" class="btn btn-primary" disabled>Get Instant
+                                Access</button>
+                        </div>
+                    </form>
+                    <p id="form-msg" class="form-msg"></p>
                     <p class="small" id="cta-footer">Secure payment via Lava.top</p>
                 </div>
             </div>

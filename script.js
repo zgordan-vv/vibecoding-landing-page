@@ -47,8 +47,8 @@ function applyTranslations() {
         }
     });
 
-    // Special catch for lead-email if id doesn't match perfectly
-    const emailInput = document.getElementById('lead-email');
+    // Special catch for checkout-email if id doesn't match perfectly
+    const emailInput = document.getElementById('checkout-email');
     if (emailInput && dict['lead-email-placeholder']) {
         emailInput.placeholder = dict['lead-email-placeholder'];
     }
@@ -90,19 +90,47 @@ function initCountdown() {
     updateTimer(); // Initial call
 }
 
-// 3. LEAD COLLECTION LOGIC (FIREBASE)
+// 3. CHECKOUT LOGIC (FIREBASE + REDIRECT)
 function initLeadForm() {
-    const form = document.getElementById('email-form');
+    const form = document.getElementById('checkout-form');
+    const emailInput = document.getElementById('checkout-email');
+    const submitBtn = document.getElementById('checkout-submit-btn');
     const msgEl = document.getElementById('form-msg');
     const lang = new URLSearchParams(window.location.search).get('lang') || 'en';
     const dict = translations[lang] || translations['en'];
 
-    if (!form) return;
+    // Default placeholder link - user will update these later
+    const lavaLinks = {
+        en: "https://lava.top",
+        ru: "https://lava.top",
+        vi: "https://lava.top",
+        ms: "https://lava.top",
+        id: "https://lava.top",
+        "zh-CN": "https://lava.top",
+        "zh-TW": "https://lava.top",
+        te: "https://lava.top",
+        ml: "https://lava.top",
+        ta: "https://lava.top",
+        kn: "https://lava.top",
+        tl: "https://lava.top"
+    };
+
+    if (!form || !emailInput || !submitBtn) return;
+
+    // Email validation to enable button
+    const validateEmail = (email) => {
+        return String(email)
+            .toLowerCase()
+            .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    };
+
+    emailInput.addEventListener('input', () => {
+        submitBtn.disabled = !validateEmail(emailInput.value);
+    });
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const email = document.getElementById('lead-email').value;
-        const submitBtn = document.getElementById('lead-submit-btn');
+        const email = emailInput.value;
 
         // Loading State
         submitBtn.disabled = true;
@@ -111,25 +139,33 @@ function initLeadForm() {
 
         try {
             if (db) {
+                // Track Checkout Intent
                 await db.collection('leads').add({
                     email: email,
                     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                     lang: lang,
-                    source: 'landing_page_gen'
+                    type: 'checkout_intent',
+                    source: 'landing_page_direct'
                 });
-                msgEl.textContent = dict['form-success'] || "Success!";
-                msgEl.className = "form-msg success";
-                form.reset();
+
+                if (msgEl) {
+                    msgEl.textContent = dict['form-success'] || "Redirecting...";
+                    msgEl.className = "form-msg success";
+                }
+
+                // Redirect to Lava.top link
+                const redirectUrl = lavaLinks[lang] || lavaLinks['en'];
+                setTimeout(() => {
+                    window.location.href = redirectUrl;
+                }, 800);
             } else {
-                throw new Error("DB Connection Missing");
+                // If Firebase fails, still redirect so we don't block the sale
+                window.location.href = lavaLinks[lang] || lavaLinks['en'];
             }
         } catch (error) {
             console.error("Submission error:", error);
-            msgEl.textContent = dict['form-error'] || "Error sending email.";
-            msgEl.className = "form-msg error";
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalBtnText;
+            // Fallback redirect
+            window.location.href = lavaLinks[lang] || lavaLinks['en'];
         }
     });
 }
