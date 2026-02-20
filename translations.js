@@ -106,7 +106,7 @@ const translations = {
         "hero-lead": "Không tốn hàng nghìn đô thuê lập trình viên. Không phụ thuộc vào nền tảng. Tự xây dựng ứng dụng với AI và sở hữu 100% mã nguồn.",
         "hero-primary-btn": "Mua sách — $5",
         "hero-secondary-btn": "Xem Demo",
-        "book-subtitle": "Ứng dụng trong một cuối tuần",
+        "book-subtitle": "Ứng Dụng Cuối Tuần",
         "pains-title": "Tại sao bạn vẫn đang chờ đợi",
         "pain-1-title": "Bẫy Low-Code",
         "pain-1-desc": "\"Tôi không tin tưởng nền tảng. Liệu tôi có phải viết lại toàn bộ khi mở rộng?\"",
