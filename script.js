@@ -47,6 +47,32 @@ function applyTranslations() {
         }
     });
 
+    // Sync Language Selector
+    const langSelect = document.getElementById('lang-select');
+    if (langSelect) langSelect.value = lang;
+
+    // Localized Cover Support
+    const bookContent = document.querySelector('.book-content');
+    const bookBg = document.querySelector('.book-bg-image');
+    const localizedCovers = {
+        'en': 'assets/cover-bg.png', // Fallback to mockup bg
+        'vi': 'assets/cover-vi.png',
+        'id': 'assets/cover-id.png',
+        'ms': 'assets/cover-ms.png',
+        'zh-CN': 'assets/cover-zh-cn.png',
+        'zh-TW': 'assets/cover-zh-tw.png'
+    };
+
+    if (bookBg && localizedCovers[lang]) {
+        if (lang !== 'en') {
+            bookBg.style.backgroundImage = `url('${localizedCovers[lang]}')`;
+            if (bookContent) bookContent.style.opacity = '0'; // Use the PNG text instead of CSS
+        } else {
+            bookBg.style.backgroundImage = `url('assets/cover-bg.png')`;
+            if (bookContent) bookContent.style.opacity = '1';
+        }
+    }
+
     // Special catch for lead-email if id doesn't match perfectly
     const emailInput = document.getElementById('lead-email');
     if (emailInput && dict['lead-email-placeholder']) {
