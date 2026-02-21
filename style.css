@@ -100,7 +100,8 @@ header {
     color: white;
     letter-spacing: -0.04em;
     font-family: 'Outfit', sans-serif;
-    /* Branding usually uses Outfit or similar */
+    text-decoration: none;
+    transition: var(--smooth);
 }
 
 .logo span {
@@ -341,6 +342,19 @@ p.lead {
     z-index: -1;
 }
 
+/* INTER-SECTION CTA */
+.inter-cta {
+    padding: 40px 0;
+    background: rgba(180, 83, 9, 0.03);
+    border-top: 1px solid rgba(180, 83, 9, 0.1);
+    border-bottom: 1px solid rgba(180, 83, 9, 0.1);
+}
+
+.inter-cta .btn {
+    font-size: 1rem;
+    padding: 12px 32px;
+}
+
 /* 7. PAINS GRID */
 .pains-section {
     padding: 100px 0;
@@ -355,6 +369,7 @@ p.lead {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 60px;
 }
 
 .glass {
@@ -540,7 +555,124 @@ p.lead {
     opacity: 0.5;
 }
 
-/* 11. FOOTER */
+/* 11. AUTHOR SECTION */
+.author-section {
+    padding: 120px 0;
+    background: radial-gradient(circle at 10% 20%, rgba(180, 83, 9, 0.05) 0%, transparent 50%);
+}
+
+.author-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.author-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--bg-surface);
+    border: var(--border-glass);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--smooth);
+}
+
+.stat-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.stat-val {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.author-bio h2 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.author-bio .subheading {
+    color: var(--primary-light);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.author-bio p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.author-footer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.author-links {
+    display: flex;
+    gap: 20px;
+}
+
+.linkedin-link,
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--smooth);
+}
+
+.linkedin-link:hover {
+    color: #0077b5;
+}
+
+.github-link:hover {
+    color: white;
+}
+
+/* 12. FOOTER */
 footer {
     padding: 80px 0;
     border-top: var(--border-glass);
@@ -584,6 +716,20 @@ footer {
 
     .pains-grid {
         grid-template-columns: 1fr;
+    }
+
+    .author-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .author-stats {
+        order: 2;
+    }
+
+    .tech-tags {
+        justify-content: center;
     }
 
     .method-grid {
