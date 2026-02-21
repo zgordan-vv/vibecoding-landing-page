@@ -150,49 +150,55 @@ function initLeadForm() {
             .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
     };
 
-    emailInput.addEventListener('input', () => {
+    const updateBtnState = () => {
         submitBtn.disabled = !validateEmail(emailInput.value);
-    });
+    };
+
+    emailInput.addEventListener('input', updateBtnState);
+    emailInput.addEventListener('change', updateBtnState);
+    updateBtnState(); // Run once for autofill support
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = emailInput.value;
+        const redirectUrl = lavaLinks[lang] || lavaLinks['en'];
 
         // Loading State
         submitBtn.disabled = true;
         const originalBtnText = submitBtn.textContent;
         submitBtn.textContent = '...';
 
-        try {
-            if (db) {
-                // Track Checkout Intent
-                await db.collection('leads').add({
-                    email: email,
-                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                    lang: lang,
-                    type: 'checkout_intent',
-                    source: 'landing_page_direct'
-                });
-
-                if (msgEl) {
-                    msgEl.textContent = dict['form-success'] || "Redirecting...";
-                    msgEl.className = "form-msg success";
-                }
-
-                // Redirect to Lava.top link
-                const redirectUrl = lavaLinks[lang] || lavaLinks['en'];
-                setTimeout(() => {
-                    window.location.href = redirectUrl;
-                }, 800);
-            } else {
-                // If Firebase fails, still redirect so we don't block the sale
-                window.location.href = lavaLinks[lang] || lavaLinks['en'];
-            }
-        } catch (error) {
-            console.error("Submission error:", error);
-            // Fallback redirect
-            window.location.href = lavaLinks[lang] || lavaLinks['en'];
+        // 1. NON-BLOCKING TRACKING
+        // We log to Firestore but we don't 'await' it to block the redirect.
+        // This prevents the "nothing happens" issue if Firebase hangs.
+        if (db) {
+            db.collection('leads').add({
+                email: email,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                lang: lang,
+                type: 'checkout_intent',
+                source: 'landing_page_direct'
+            }).catch(err => console.warn("Background tracking failed:", err));
         }
+
+        // 2. IMMEDIATE FEEDBACK & REDIRECT
+        if (msgEl) {
+            msgEl.textContent = dict['form-success'] || "Redirecting...";
+            msgEl.className = "form-msg success";
+        }
+
+        // Delay slightly for visual feedback, then go to checkout
+        setTimeout(() => {
+            window.location.href = redirectUrl;
+        }, 600);
+
+        // 3. FAIL-SAFE: Re-enable button after 5 seconds if still on page
+        setTimeout(() => {
+            if (submitBtn.textContent === '...') {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        }, 5000);
     });
 }
 
