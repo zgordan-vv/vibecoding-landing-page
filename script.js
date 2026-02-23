@@ -151,6 +151,17 @@ function initCheckout() {
     // Track checkout clicks (Intent tracking)
     document.querySelectorAll('.buy-btn').forEach(btn => {
         btn.addEventListener('click', () => {
+            // 1. Meta Pixel Tracking
+            if (window.fbq) {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Vibecoding Book',
+                    content_category: 'Ebook',
+                    value: 5.00,
+                    currency: 'USD'
+                });
+            }
+
+            // 2. Firebase Backup Tracking
             if (db) {
                 db.collection('analytics').add({
                     event: 'buy_button_click',
@@ -159,8 +170,6 @@ function initCheckout() {
                     timestamp: firebase.firestore.FieldValue.serverTimestamp()
                 }).catch(() => { /* Silent fail */ });
             }
-            // If it's the anchor in the pricing section, it will naturally navigate.
-            // If it's an anchor pointing to #pricing (like the nav), it will also naturally navigate.
         });
     });
 }
