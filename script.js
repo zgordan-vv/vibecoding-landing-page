@@ -62,6 +62,8 @@ function applyTranslations() {
         'vi': 'assets/cover-vi.png',
         'id': 'assets/cover-id.png',
         'ms': 'assets/cover-ms.png',
+        'te': 'assets/cover-te.png',
+        'ta': 'assets/cover-ta.png',
         'zh-CN': 'assets/cover-zh-cn.png',
         'zh-TW': 'assets/cover-zh-tw.png'
     };
@@ -126,6 +128,8 @@ const lavaLinks = {
     vi: "https://app.lava.top/products/4783af5f-f992-40f2-86d5-1a63a9555e93",
     ms: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
     id: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    te: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    ta: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
     "zh-CN": "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
     "zh-TW": "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40"
 };

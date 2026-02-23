@@ -41,6 +41,13 @@
         fbq('init', '4319721205022244');
         fbq('track', 'PageView');
     </script>
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "vlq8obebxn");
+    </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=4319721205022244&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
@@ -68,6 +75,11 @@
                             <option value="id">ID</option>
                             <option value="zh-CN">简体</option>
                             <option value="zh-TW">繁體</option>
+                            <option value="te">తెలుగు</option>
+                            <option value="ta">தமிழ்</option>
+                            <option value="ml">മലയാളം</option>
+                            <option value="kn">ಕನ್ನಡ</option>
+                            <option value="tl">Tagalog</option>
                         </select>
                     </div>
                     <a href="#pricing" id="nav-buy-btn" class="btn btn-primary buy-btn">Get the Book — $5</a>
@@ -325,7 +337,7 @@
                         hand-holding.</p>
                     <div class="price-box">
                         <div class="price" id="cta-price">$5<span>.00</span></div>
-                        <div class="price-strikethrough">$20</div>
+                        <div class="price-strikethrough" id="cta-price-original">$20</div>
                     </div>
 
                     <div class="pricing-cta-container" style="margin: 2rem auto;">

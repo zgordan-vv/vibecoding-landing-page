@@ -59,7 +59,13 @@ const translations = {
         "lead-submit-btn": "Buy Now — $5",
         "form-success": "Redirecting to secure payment...",
         "form-error": "Something went wrong. Please try again.",
-        "lead-email-placeholder": "Enter your email"
+        "lead-email-placeholder": "Enter your email",
+        "banner-text": "Special Launch Price: $5 until March 1st. Then $20.",
+        "cta-title": "Ready to launch?",
+        "cta-desc": "Get the full 100-page guide with prompts, screenshots, and step-by-step hand-holding.",
+        "cta-footer": "Secure payment via Lava.top",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     ru: {
         "nav-method": "Метод",
@@ -121,7 +127,13 @@ const translations = {
         "lead-submit-btn": "Купить — $5",
         "form-success": "Переход к оплате...",
         "form-error": "Что-то пошло не так. Попробуйте еще раз.",
-        "lead-email-placeholder": "Введите ваш email"
+        "lead-email-placeholder": "Введите ваш email",
+        "banner-text": "Специальная цена запуска: $5 до 1 марта. Затем $20.",
+        "cta-title": "Готовы к запуску?",
+        "cta-desc": "Получите полное 100-страничное руководство с промптами, скриншотами и пошаговыми инструкциями.",
+        "cta-footer": "Безопасная оплата через Lava.top",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     vi: {
         "nav-method": "Phương pháp",
@@ -183,7 +195,13 @@ const translations = {
         "lead-submit-btn": "Mua Ngay — $5",
         "form-success": "Đang chuyển hướng đến trang thanh toán...",
         "form-error": "Đã có lỗi xảy ra. Vui lòng thử lại.",
-        "lead-email-placeholder": "Nhập email của bạn"
+        "lead-email-placeholder": "Nhập email của bạn",
+        "banner-text": "Giá ra mắt đặc biệt: $5 đến ngày 1 tháng 3. Sau đó là $20.",
+        "cta-title": "Sẵn sàng để ra mắt?",
+        "cta-desc": "Nhận hướng dẫn đầy đủ 100 trang với các câu lệnh, ảnh chụp màn hình và hướng dẫn từng bước.",
+        "cta-footer": "Thanh toán an toàn qua Lava.top",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     ms: {
         "nav-method": "Kaedah",
@@ -245,7 +263,13 @@ const translations = {
         "lead-submit-btn": "Beli Sekarang — $5",
         "form-success": "Menghalakan ke pembayaran selamat...",
         "form-error": "Sesuatu telah berlaku. Sila cuba lagi.",
-        "lead-email-placeholder": "Masukkan e-mel anda"
+        "lead-email-placeholder": "Masukkan e-mel anda",
+        "banner-text": "Harga Pelancaran Istimewa: $5 sehingga 1 Mac. Kemudian $20.",
+        "cta-title": "Sedia untuk dilancarkan?",
+        "cta-desc": "Dapatkan panduan lengkap 100 halaman dengan prom, tangkapan skrin dan bimbingan langkah demi langkah.",
+        "cta-footer": "Pembayaran selamat melalui Lava.top",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     id: {
         "nav-method": "Metode",
@@ -307,7 +331,13 @@ const translations = {
         "lead-submit-btn": "Beli Sekarang — $5",
         "form-success": "Mengarahkan ke pembayaran aman...",
         "form-error": "Ada yang salah. Coba lagi ya.",
-        "lead-email-placeholder": "Masukkan email kamu"
+        "lead-email-placeholder": "Masukkan email kamu",
+        "banner-text": "Harga Peluncuran Khusus: $5 hingga 1 Maret. Kemudian $20.",
+        "cta-title": "Siap luncurkan?",
+        "cta-desc": "Dapatkan panduan lengkap 100 halaman dengan prompt, tangkapan layar, dan panduan langkah demi langkah.",
+        "cta-footer": "Pembayaran aman melalui Lava.top",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     "zh-CN": {
         "nav-method": "方法论",
@@ -369,7 +399,13 @@ const translations = {
         "lead-submit-btn": "立即购买 — $5",
         "form-success": "正在跳转至安全支付页面...",
         "form-error": "发生错误，请重试。",
-        "lead-email-placeholder": "输入你的电子邮箱"
+        "lead-email-placeholder": "输入你的电子邮箱",
+        "banner-text": "特别发布价格：$5（至3月1日）。之后为$20。",
+        "cta-title": "准备好发布了吗？",
+        "cta-desc": "获取100页的完整指南，包含提示词、屏幕截图和逐步引导。",
+        "cta-footer": "通过 Lava.top 安全支付",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     "zh-TW": {
         "nav-method": "方法論",
@@ -431,7 +467,13 @@ const translations = {
         "lead-submit-btn": "立即購買 — $5",
         "form-success": "正在跳轉至安全支付頁面...",
         "form-error": "發生錯誤，請重試。",
-        "lead-email-placeholder": "輸入你的電子郵箱"
+        "lead-email-placeholder": "輸入你的電子郵箱",
+        "banner-text": "特別發布價格：$5（至3月1日）。之後為$20。",
+        "cta-title": "準備好發布了嗎？",
+        "cta-desc": "獲取100頁的完整指南，包含提示詞、螢幕截圖和逐步引導。",
+        "cta-footer": "透過 Lava.top 安全支付",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     te: {
         "nav-method": "పద్ధతి",
@@ -493,7 +535,13 @@ const translations = {
         "lead-submit-btn": "ఇప్పుడే కొనండి — $5",
         "form-success": "సురక్షిత చెల్లింపుకు మళ్ళించబడుతోంది...",
         "form-error": "ఏదో తప్పు జరిగింది. మళ్ళీ ప్రయత్నించండి.",
-        "lead-email-placeholder": "మీ ఇమెయిల్ నమోదు చేయండి"
+        "lead-email-placeholder": "మీ ఇమెయిల్ నమోదు చేయండి",
+        "banner-text": "ప్రత్యేక లాంచ్ ధర: మార్చి 1 వరకు $5. తర్వాత $20.",
+        "cta-title": "లాంచ్ చేయడానికి సిద్ధంగా ఉన్నారా?",
+        "cta-desc": "ప్రాంప్ట్‌లు, స్క్రీన్‌షాట్‌లు మరియు దశల వారీ మార్గదర్శకత్వంతో కూడిన 100-పేజీల పూర్తి గైడ్‌ను పొందండి.",
+        "cta-footer": "Lava.top ద్వారా సురక్షిత చెల్లింపు",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     ml: {
         "nav-method": "രീതി",
@@ -555,7 +603,13 @@ const translations = {
         "lead-submit-btn": "ഇപ്പോൾ തന്നെ വാങ്ങൂ — $5",
         "form-success": "പേയ്‌മെന്റ് പേജിലേക്ക് റീഡയറക്ട് ചെയ്യുന്നു...",
         "form-error": "എന്തോ പിശക് സംഭవిച്ചു. വീണ്ടും ശ്രമിക്കുക.",
-        "lead-email-placeholder": "നിങ്ങളുടെ ഇമെയിൽ നൽകുക"
+        "lead-email-placeholder": "നിങ്ങളുടെ ഇമെയിൽ നൽകുക",
+        "banner-text": "പ്രത്യേക ലോഞ്ച് വില: മാർച്ച് 1 വരെ $5. പിന്നീട് $20.",
+        "cta-title": "ലോഞ്ച് ചെയ്യാൻ തയ്യാറാണോ?",
+        "cta-desc": "പ്രോംപ്റ്റുകൾ, സ്ക്രീൻഷോട്ടുകൾ, ഘട്ടം ഘട്ടമായുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ എന്നിവയടങ്ങിയ 100 പേജുള്ള പൂർണ്ണ ഗൈഡ് നേടുക.",
+        "cta-footer": "Lava.top വഴി സുരക്ഷിതമായ പേയ്‌മെന്റ്",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     ta: {
         "nav-method": "வழிமுறை",
@@ -617,7 +671,13 @@ const translations = {
         "lead-submit-btn": "இப்பொழுதே வாங்கவும் — $5",
         "form-success": "கட்டணப் பக்கத்திற்கு அழைத்துச் செல்லப்படுகிறது...",
         "form-error": "ஏதோ தவறு நடந்துவிட்டது. மீண்டும் முயற்சிக்கவும்.",
-        "lead-email-placeholder": "மின்னஞ்சலை உள்ளிடவும்"
+        "lead-email-placeholder": "மின்னஞ்சலை உள்ளிடவும்",
+        "banner-text": "சிறப்பு வெளியீட்டு விலை: மார்ச் 1 வரை $5. பிறகு $20.",
+        "cta-title": "வெளியிடத் தயாரா?",
+        "cta-desc": "புராம்ப்ட்கள், ஸ்கிரீன்ஷாட்கள் மற்றும் படிப்படியான வழிகாட்டலுடன் கூடிய 100 பக்க முழு வழிகாட்டியைப் பெறுங்கள்.",
+        "cta-footer": "Lava.top மூலம் பாதுகாப்பான கட்டணம்",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     kn: {
         "nav-method": "ವಿಧಾನ",
@@ -679,7 +739,13 @@ const translations = {
         "lead-submit-btn": "ಈಗಲೇ ಖರೀದಿಸಿ — $5",
         "form-success": "ಪಾವತಿ ಹಂತಕ್ಕೆ ಕರೆದೊಯ್ಯಲಾಗುತ್ತಿದೆ...",
         "form-error": "ಏನೋ ತಪ್ಪಾಗಿದೆ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
-        "lead-email-placeholder": "ನಿಮ್ಮ ಇಮೇಲ್ ಹಾಕಿ"
+        "lead-email-placeholder": "ನಿಮ್ಮ ಇಮೇಲ್ ಹಾಕಿ",
+        "banner-text": "ವಿಶೇಷ ಲಾಂಚ್ ಬೆಲೆ: ಮಾರ್ಚ್ 1 ರವರೆಗೆ $5. ನಂತರ $20.",
+        "cta-title": "ಲಾಂಚ್ ಮಾಡಲು ಸಿದ್ಧರಿದ್ದೀರಾ?",
+        "cta-desc": "ಪ್ರಾಂಪ್ಟ್‌ಗಳು, ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ಗಳು ಮತ್ತು ಹಂತ-ಹಂತದ ಮಾರ್ಗದರ್ಶನದೊಂದಿಗೆ 100 ಪುಟಗಳ ಸಂಪೂರ್ಣ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ಪಡೆಯಿರಿ.",
+        "cta-footer": "Lava.top ಮೂಲಕ ಸುರಕ್ಷಿತ ಪಾವತಿ",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     },
     tl: {
         "nav-method": "Paraan",
@@ -741,6 +807,12 @@ const translations = {
         "lead-submit-btn": "Bumili na — $5",
         "form-success": "Papunta na sa secure payment...",
         "form-error": "May problemang nangyari. Subukan mo ulit.",
-        "lead-email-placeholder": "Ilagay ang email mo"
+        "lead-email-placeholder": "Ilagay ang email mo",
+        "banner-text": "Espesyal na Presyo sa Launch: $5 hanggang Marso 1. Magiging $20 pagkatapos.",
+        "cta-title": "Handa ka na bang mag-launch?",
+        "cta-desc": "Kunin ang buong 100-pahinang gabay na may mga prompt, screenshots, at hakbang-hagbang na pag-alalay.",
+        "cta-footer": "Ligtas na pagbabayad sa pamamagitan ng Lava.top",
+        "cta-price": "$5<span>.00</span>",
+        "cta-price-original": "$20"
     }
 };
