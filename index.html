@@ -30,7 +30,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -70,7 +70,7 @@
                             <option value="zh-TW">繁體</option>
                         </select>
                     </div>
-                    <a href="#pricing" id="nav-buy-btn" class="btn btn-primary">Get the Book — $5</a>
+                    <a href="#pricing" id="nav-buy-btn" class="btn btn-primary buy-btn">Get the Book — $5</a>
                 </div>
             </nav>
         </div>
@@ -116,7 +116,7 @@
         <!-- INTER-SECTION CTA -->
         <div class="inter-cta">
             <div class="container text-center">
-                <a href="#pricing" id="inter-cta-1" class="btn btn-primary">Stop waiting. Start building →</a>
+                <a href="#pricing" id="inter-cta-1" class="btn btn-primary buy-btn">Stop waiting. Start building →</a>
             </div>
         </div>
 
@@ -186,7 +186,8 @@
         <!-- INTER-SECTION CTA -->
         <div class="inter-cta">
             <div class="container text-center">
-                <a href="#pricing" id="inter-cta-2" class="btn btn-primary">I'm tired of waiting. I want to build →</a>
+                <a href="#pricing" id="inter-cta-2" class="btn btn-primary buy-btn">I'm tired of waiting. I want to
+                    build →</a>
             </div>
         </div>
 
@@ -230,7 +231,7 @@
         <!-- INTER-SECTION CTA -->
         <div class="inter-cta">
             <div class="container text-center">
-                <a href="#pricing" id="inter-cta-3" class="btn btn-primary">This is the way. Let's start →</a>
+                <a href="#pricing" id="inter-cta-3" class="btn btn-primary buy-btn">This is the way. Let's start →</a>
             </div>
         </div>
 
@@ -309,7 +310,8 @@
         <!-- INTER-SECTION CTA -->
         <div class="inter-cta">
             <div class="container text-center">
-                <a href="#pricing" id="inter-cta-4" class="btn btn-primary">Ready to meet your future self? Get the book
+                <a href="#pricing" id="inter-cta-4" class="btn btn-primary buy-btn">Ready to meet your future self? Get
+                    the book
                     →</a>
             </div>
         </div>
@@ -326,16 +328,11 @@
                         <div class="price-strikethrough">$20</div>
                     </div>
 
-                    <form id="checkout-form" class="email-form" style="max-width: 500px; margin: 2rem auto;">
-                        <p id="lead-form-desc" style="margin-bottom: 1rem; opacity: 0.8;">Enter your email to proceed to
-                            secure checkout.</p>
-                        <div class="input-group">
-                            <input type="email" id="lead-email" placeholder="Enter your email" required>
-                            <button type="submit" id="lead-submit-btn" class="btn btn-primary" disabled>Get Instant
-                                Access</button>
-                        </div>
-                    </form>
-                    <p id="form-msg" class="form-msg"></p>
+                    <div class="pricing-cta-container" style="margin: 2rem auto;">
+                        <a href="https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40"
+                            id="lead-submit-btn" class="btn btn-primary btn-xl shadow-glow buy-btn"
+                            style="width: 100%; max-width: 400px; display: inline-block;">Get Instant Access</a>
+                    </div>
                     <p class="small" id="cta-footer">Secure payment via Lava.top</p>
                 </div>
             </div>

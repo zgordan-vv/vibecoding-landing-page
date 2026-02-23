@@ -51,6 +51,9 @@ function applyTranslations() {
     const langSelect = document.getElementById('lang-select');
     if (langSelect) langSelect.value = lang;
 
+    // Localized Buy Buttons
+    updateBuyButtons(lang);
+
     // Localized Cover Support
     const bookContent = document.querySelector('.book-content');
     const bookBg = document.querySelector('.book-bg-image');
@@ -116,89 +119,49 @@ function initCountdown() {
     updateTimer(); // Initial call
 }
 
-// 3. CHECKOUT LOGIC (FIREBASE + REDIRECT)
-function initLeadForm() {
-    const form = document.getElementById('checkout-form');
-    const emailInput = document.getElementById('lead-email');
-    const submitBtn = document.getElementById('lead-submit-btn');
-    const msgEl = document.getElementById('form-msg');
+// 3. CHECKOUT LOGIC (LOCALIZED REDIRECTS)
+const lavaLinks = {
+    en: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    ru: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    vi: "https://app.lava.top/products/4783af5f-f992-40f2-86d5-1a63a9555e93",
+    ms: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    id: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    "zh-CN": "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    "zh-TW": "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40"
+};
+
+function updateBuyButtons(lang) {
+    const url = lavaLinks[lang] || lavaLinks['en'];
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+        // Only update if it's an anchor tag leading to checkout (some buy-btns might be scroll anchors)
+        if (btn.tagName === 'A' && (btn.id === 'lead-submit-btn' || btn.classList.contains('final-btn-link'))) {
+            btn.href = url;
+        }
+    });
+
+    // Specific fix for the main CTA button if it's not caught
+    const mainBtn = document.getElementById('lead-submit-btn');
+    if (mainBtn) mainBtn.href = url;
+}
+
+function initCheckout() {
     const lang = new URLSearchParams(window.location.search).get('lang') || 'en';
-    const dict = translations[lang] || translations['en'];
+    updateBuyButtons(lang);
 
-    // Default placeholder link - user will update these later
-    const lavaLinks = {
-        en: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        ru: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        vi: "https://app.lava.top/products/4783af5f-f992-40f2-86d5-1a63a9555e93",
-        ms: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        id: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        "zh-CN": "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        "zh-TW": "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        te: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        ml: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        ta: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        kn: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-        tl: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40"
-    };
-
-    if (!form || !emailInput || !submitBtn) return;
-
-    // Email validation to enable button
-    const validateEmail = (email) => {
-        return String(email)
-            .toLowerCase()
-            .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-    };
-
-    const updateBtnState = () => {
-        submitBtn.disabled = !validateEmail(emailInput.value);
-    };
-
-    emailInput.addEventListener('input', updateBtnState);
-    emailInput.addEventListener('change', updateBtnState);
-    updateBtnState(); // Run once for autofill support
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = emailInput.value;
-        const redirectUrl = lavaLinks[lang] || lavaLinks['en'];
-
-        // Loading State
-        submitBtn.disabled = true;
-        const originalBtnText = submitBtn.textContent;
-        submitBtn.textContent = '...';
-
-        // 1. NON-BLOCKING TRACKING
-        // We log to Firestore but we don't 'await' it to block the redirect.
-        // This prevents the "nothing happens" issue if Firebase hangs.
-        if (db) {
-            db.collection('leads').add({
-                email: email,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                lang: lang,
-                type: 'checkout_intent',
-                source: 'landing_page_direct'
-            }).catch(err => console.warn("Background tracking failed:", err));
-        }
-
-        // 2. IMMEDIATE FEEDBACK & REDIRECT
-        if (msgEl) {
-            msgEl.textContent = dict['form-success'] || "Redirecting...";
-            msgEl.className = "form-msg success";
-        }
-
-        // Delay slightly for visual feedback, then go to checkout
-        setTimeout(() => {
-            window.location.href = redirectUrl;
-        }, 600);
-
-        // 3. FAIL-SAFE: Re-enable button after 5 seconds if still on page
-        setTimeout(() => {
-            if (submitBtn.textContent === '...') {
-                submitBtn.textContent = originalBtnText;
-                submitBtn.disabled = false;
+    // Track checkout clicks (Intent tracking)
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (db) {
+                db.collection('analytics').add({
+                    event: 'buy_button_click',
+                    id: btn.id,
+                    lang: lang,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                }).catch(() => { /* Silent fail */ });
             }
-        }, 5000);
+            // If it's the anchor in the pricing section, it will naturally navigate.
+            // If it's an anchor pointing to #pricing (like the nav), it will also naturally navigate.
+        });
     });
 }
 
@@ -234,6 +197,6 @@ function initUI() {
 window.addEventListener('DOMContentLoaded', () => {
     applyTranslations();
     initCountdown();
-    initLeadForm();
+    initCheckout();
     initUI();
 });
