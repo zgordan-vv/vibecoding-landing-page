@@ -23,6 +23,9 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
         rel="stylesheet">
 
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Meta Pixel Code -->
@@ -54,6 +57,7 @@
 </head>
 
 <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
     <div id="price-banner" class="price-banner">
         <span id="banner-text">Special Launch Price: $5 until March 1st. Then $20.</span>
         <span id="countdown"></span>
@@ -82,8 +86,10 @@
                             <option value="tl">Tagalog</option>
                         </select>
                     </div>
-                    <a href="#pricing" id="nav-buy-btn" class="btn btn-primary buy-btn">Get the Book — $5</a>
                 </div>
+                <a href="#pricing" id="nav-buy-btn" class="btn btn-primary buy-btn nav-desktop-btn">Get the Book —
+                    $5</a>
+                <a href="#pricing" class="btn btn-primary buy-btn nav-mobile-btn">Buy $5</a>
             </nav>
         </div>
     </header>
@@ -124,6 +130,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- TRUST BAR -->
+        <div class="trust-bar">
+            <div class="container text-center">
+                <span id="trust-text">Join 500+ non-technical founders building with AI</span>
+            </div>
+        </div>
 
         <!-- INTER-SECTION CTA -->
         <div class="inter-cta">

@@ -23,9 +23,25 @@ try {
 }
 
 // 1. LOCALIZATION ENGINE
-function applyTranslations() {
+function getSelectedLanguage() {
     const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || 'en';
+    const urlLang = urlParams.get('lang');
+    if (urlLang) {
+        localStorage.setItem('vibecoding_lang', urlLang);
+        return urlLang;
+    }
+
+    const savedLang = localStorage.getItem('vibecoding_lang');
+    if (savedLang) return savedLang;
+
+    // Navigator Detection
+    const navLang = navigator.language.split('-')[0];
+    const supported = Object.keys(translations);
+    return supported.includes(navLang) ? navLang : 'en';
+}
+
+function applyTranslations() {
+    const lang = getSelectedLanguage();
     const dict = translations[lang] || translations['en'];
 
     // Map dictionary keys to element IDs
@@ -196,6 +212,14 @@ function initUI() {
         observer.observe(el);
     });
 
+    // Scroll Progress
+    const scrollProgress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / height) * 100;
+        if (scrollProgress) scrollProgress.style.width = scrolled + '%';
+    });
+
     const style = document.createElement('style');
     style.textContent = `
         .visible {
@@ -207,8 +231,13 @@ function initUI() {
 }
 
 // BOOTSTRAP
-window.addEventListener('DOMContentLoaded', () => {
+// Run as early as possible to prevent flicker
+(function () {
     applyTranslations();
+})();
+
+window.addEventListener('DOMContentLoaded', () => {
+    applyTranslations(); // Sync again once DOM is ready
     initCountdown();
     initCheckout();
     initUI();
