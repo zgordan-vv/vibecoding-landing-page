@@ -65,7 +65,8 @@ const translations = {
         "cta-desc": "Get the full 100-page guide with prompts, screenshots, and step-by-step hand-holding.",
         "cta-footer": "Secure payment via Lava.top",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "Join 500+ non-technical founders building with AI"
     },
     ru: {
         "nav-method": "Метод",
@@ -133,7 +134,8 @@ const translations = {
         "cta-desc": "Получите полное 100-страничное руководство с промптами, скриншотами и пошаговыми инструкциями.",
         "cta-footer": "Безопасная оплата через Lava.top",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "Присоединяйтесь к 500+ нетехническим основателям, создающим с помощью ИИ"
     },
     vi: {
         "nav-method": "Phương pháp",
@@ -201,7 +203,8 @@ const translations = {
         "cta-desc": "Nhận hướng dẫn đầy đủ 100 trang với các câu lệnh, ảnh chụp màn hình và hướng dẫn từng bước.",
         "cta-footer": "Thanh toán an toàn qua Lava.top",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "Tham gia cùng hơn 500 nhà sáng lập không chuyên kỹ thuật đang xây dựng với AI"
     },
     ms: {
         "nav-method": "Kaedah",
@@ -269,7 +272,8 @@ const translations = {
         "cta-desc": "Dapatkan panduan lengkap 100 halaman dengan prom, tangkapan skrin dan bimbingan langkah demi langkah.",
         "cta-footer": "Pembayaran selamat melalui Lava.top",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "Sertai 500+ pengasas bukan teknikal yang membina dengan AI"
     },
     id: {
         "nav-method": "Metode",
@@ -337,7 +341,8 @@ const translations = {
         "cta-desc": "Dapatkan panduan lengkap 100 halaman dengan prompt, tangkapan layar, dan panduan langkah demi langkah.",
         "cta-footer": "Pembayaran aman melalui Lava.top",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "Bergabunglah dengan 500+ founder non-teknis yang membangun dengan AI"
     },
     "zh-CN": {
         "nav-method": "方法论",
@@ -405,7 +410,8 @@ const translations = {
         "cta-desc": "获取100页的完整指南，包含提示词、屏幕截图和逐步引导。",
         "cta-footer": "通过 Lava.top 安全支付",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "加入 500+ 位正在使用 AI 构建产品的非技术创始人行列"
     },
     "zh-TW": {
         "nav-method": "方法論",
@@ -473,7 +479,8 @@ const translations = {
         "cta-desc": "獲取100頁的完整指南，包含提示詞、螢幕截圖和逐步引導。",
         "cta-footer": "透過 Lava.top 安全支付",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "加入 500+ 位正在使用 AI 構建產品的非技術創辦人行列"
     },
     te: {
         "nav-method": "పద్ధతి",
@@ -541,7 +548,8 @@ const translations = {
         "cta-desc": "ప్రాంప్ట్‌లు, స్క్రీన్‌షాట్‌లు మరియు దశల వారీ మార్గదర్శకత్వంతో కూడిన 100-పేజీల పూర్తి గైడ్‌ను పొందండి.",
         "cta-footer": "Lava.top ద్వారా సురక్షిత చెల్లింపు",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "AIతో నిర్మిస్తున్న 500+ నాన్-టెక్నికల్ ఫౌండర్లతో చేరండి"
     },
     ml: {
         "nav-method": "രീതി",
@@ -609,7 +617,8 @@ const translations = {
         "cta-desc": "പ്രോംപ്റ്റുകൾ, സ്ക്രീൻഷോട്ടുകൾ, ഘട്ടം ഘട്ടമായുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ എന്നിവയടങ്ങിയ 100 പേജുള്ള പൂർണ്ണ ഗൈഡ് നേടുക.",
         "cta-footer": "Lava.top വഴി സുരക്ഷിതമായ പേയ്‌മെന്റ്",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "AI ഉപയോഗിച്ച് നിർമ്മിക്കുന്ന 500-ലധികം നോൺ-ടെക്നിക്കൽ ഫൗണ്ടർമാരോടൊപ്പം ചേരൂ"
     },
     ta: {
         "nav-method": "வழிமுறை",
@@ -677,7 +686,8 @@ const translations = {
         "cta-desc": "புராம்ப்ட்கள், ஸ்கிரீன்ஷாட்கள் மற்றும் படிப்படியான வழிகாட்டலுடன் கூடிய 100 பக்க முழு வழிகாட்டியைப் பெறுங்கள்.",
         "cta-footer": "Lava.top மூலம் பாதுகாப்பான கட்டணம்",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "AI மூலம் உருவாக்கி வரும் 500+ தொழில்நுட்பம் சாரா நிறுவனர்களுடன் இணையுங்கள்"
     },
     kn: {
         "nav-method": "ವಿಧಾನ",
@@ -745,7 +755,8 @@ const translations = {
         "cta-desc": "ಪ್ರಾಂಪ್ಟ್‌ಗಳು, ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ಗಳು ಮತ್ತು ಹಂತ-ಹಂತದ ಮಾರ್ಗದರ್ಶನದೊಂದಿಗೆ 100 ಪುಟಗಳ ಸಂಪೂರ್ಣ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ಪಡೆಯಿರಿ.",
         "cta-footer": "Lava.top ಮೂಲಕ ಸುರಕ್ಷಿತ ಪಾವತಿ",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "AI ನೊಂದಿಗೆ ನಿರ್ಮಿಸುತ್ತಿರುವ 500+ ನಾನ್-ಟೆಕ್ನಿಕಲ್ ಫೌಂಡರ್‌ಗಳೊಂದಿಗೆ ಸೇರಿ"
     },
     tl: {
         "nav-method": "Paraan",
@@ -813,6 +824,7 @@ const translations = {
         "cta-desc": "Kunin ang buong 100-pahinang gabay na may mga prompt, screenshots, at hakbang-hagbang na pag-alalay.",
         "cta-footer": "Ligtas na pagbabayad sa pamamagitan ng Lava.top",
         "cta-price": "$5<span>.00</span>",
-        "cta-price-original": "$20"
+        "cta-price-original": "$20",
+        "trust-text": "Sumali sa 500+ non-technical founders na nagbu-build gamit ang AI"
     }
 };

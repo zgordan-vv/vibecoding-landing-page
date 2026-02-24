@@ -34,10 +34,8 @@ function getSelectedLanguage() {
     const savedLang = localStorage.getItem('vibecoding_lang');
     if (savedLang) return savedLang;
 
-    // Navigator Detection
-    const navLang = navigator.language.split('-')[0];
-    const supported = Object.keys(translations);
-    return supported.includes(navLang) ? navLang : 'en';
+    // Default to English
+    return 'en';
 }
 
 function applyTranslations() {
