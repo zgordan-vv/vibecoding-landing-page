@@ -121,12 +121,20 @@ function initCountdown() {
         const distance = deadline - now;
 
         // THE PRICE FLIP
+        const lang = getSelectedLanguage();
         if (distance < 0) {
             clearInterval(x);
             if (priceBanner) priceBanner.style.background = "#450A0A"; // Darker warning red
-            if (bannerText) bannerText.textContent = "Current Price: $20. Join the elite founders.";
-            const ctaPrice = document.getElementById('cta-price');
-            if (ctaPrice) ctaPrice.innerHTML = "$20<span>.00</span>";
+
+            if (lang === 'en') {
+                if (bannerText) bannerText.textContent = "Current Price: $75. Join the elite founders.";
+                const ctaPrice = document.getElementById('cta-price');
+                if (ctaPrice) ctaPrice.innerHTML = "$75<span>.00</span>";
+            } else {
+                if (bannerText) bannerText.textContent = "Current Price: $20. Join the elite founders.";
+                const ctaPrice = document.getElementById('cta-price');
+                if (ctaPrice) ctaPrice.innerHTML = "$20<span>.00</span>";
+            }
             if (countdownEl) countdownEl.textContent = "";
             return;
         }
