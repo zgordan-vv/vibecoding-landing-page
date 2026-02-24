@@ -72,21 +72,20 @@ function applyTranslations() {
     const bookContent = document.querySelector('.book-content');
     const bookBg = document.querySelector('.book-bg-image');
     const localizedCovers = {
-        'en': 'assets/cover-bg.png', // Fallback to mockup bg
         'vi': 'assets/cover-vi.png',
         'id': 'assets/cover-id.png',
         'ms': 'assets/cover-ms.png',
-        'te': 'assets/cover-te.png',
-        'ta': 'assets/cover-ta.png',
         'zh-CN': 'assets/cover-zh-cn.png',
         'zh-TW': 'assets/cover-zh-tw.png'
     };
 
-    if (bookBg && localizedCovers[lang]) {
-        if (lang !== 'en') {
+    if (bookBg) {
+        if (localizedCovers[lang]) {
+            // Use localized PNG cover, hide HTML text
             bookBg.style.backgroundImage = `url('${localizedCovers[lang]}')`;
-            if (bookContent) bookContent.style.opacity = '0'; // Use the PNG text instead of CSS
+            if (bookContent) bookContent.style.opacity = '0';
         } else {
+            // Use default BG, show HTML text (localized via translations.js)
             bookBg.style.backgroundImage = `url('assets/cover-bg.png')`;
             if (bookContent) bookContent.style.opacity = '1';
         }
