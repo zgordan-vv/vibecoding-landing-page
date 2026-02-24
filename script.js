@@ -76,18 +76,27 @@ function applyTranslations() {
         'id': 'assets/cover-id.png',
         'ms': 'assets/cover-ms.png',
         'zh-CN': 'assets/cover-zh-cn.png',
-        'zh-TW': 'assets/cover-zh-tw.png'
+        'zh-TW': 'assets/cover-zh-tw.png',
+        'en': 'assets/cover-en.png' // Use PNG for English if available
     };
+
+    console.log('Applying cover for lang:', lang);
 
     if (bookBg) {
         if (localizedCovers[lang]) {
-            // Use localized PNG cover, hide HTML text
+            console.log('Using PNG cover:', localizedCovers[lang]);
             bookBg.style.backgroundImage = `url('${localizedCovers[lang]}')`;
-            if (bookContent) bookContent.style.opacity = '0';
+            if (bookContent) {
+                bookContent.style.setProperty('opacity', '0', 'important');
+                bookContent.style.pointerEvents = 'none';
+            }
         } else {
-            // Use default BG, show HTML text (localized via translations.js)
+            console.log('Using HTML cover for:', lang);
             bookBg.style.backgroundImage = `url('assets/cover-bg.png')`;
-            if (bookContent) bookContent.style.opacity = '1';
+            if (bookContent) {
+                bookContent.style.setProperty('opacity', '1', 'important');
+                bookContent.style.pointerEvents = 'auto';
+            }
         }
     }
 
