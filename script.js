@@ -149,7 +149,7 @@ const lavaLinks = {
     ru: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
     vi: "https://app.lava.top/products/4783af5f-f992-40f2-86d5-1a63a9555e93",
     ms: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
-    id: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
+    id: "https://app.lava.top/products/95cc8149-1f7d-4184-b536-576d49d254bd",
     te: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
     ta: "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
     "zh-CN": "https://app.lava.top/products/dab88388-6e4d-4775-a490-328a01d15a40",
