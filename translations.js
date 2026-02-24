@@ -66,7 +66,10 @@ const translations = {
         "cta-footer": "Secure payment via Lava.top",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "Join 500+ non-technical founders building with AI"
+        "trust-text": "Join 500+ non-technical founders building with AI",
+        "footer-author": "By Viacheslav Zgordan",
+        "footer-consult": "Consulting",
+        "footer-privacy": "Privacy"
     },
     ru: {
         "nav-method": "Метод",
@@ -135,7 +138,10 @@ const translations = {
         "cta-footer": "Безопасная оплата через Lava.top",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "Присоединяйтесь к 500+ нетехническим основателям, создающим с помощью ИИ"
+        "trust-text": "Присоединяйтесь к 500+ нетехническим основателям, создающим с помощью ИИ",
+        "footer-author": "Автор: Вячеслав Згордан",
+        "footer-consult": "Консультация",
+        "footer-privacy": "Конфиденциальность"
     },
     vi: {
         "nav-method": "Phương pháp",
@@ -204,7 +210,10 @@ const translations = {
         "cta-footer": "Thanh toán an toàn qua Lava.top",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "Tham gia cùng hơn 500 nhà sáng lập không chuyên kỹ thuật đang xây dựng với AI"
+        "trust-text": "Tham gia cùng hơn 500 nhà sáng lập không chuyên kỹ thuật đang xây dựng với AI",
+        "footer-author": "Bởi Viacheslav Zgordan",
+        "footer-consult": "Tư vấn",
+        "footer-privacy": "Quyền riêng tư"
     },
     ms: {
         "nav-method": "Kaedah",
@@ -273,7 +282,10 @@ const translations = {
         "cta-footer": "Pembayaran selamat melalui Lava.top",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "Sertai 500+ pengasas bukan teknikal yang membina dengan AI"
+        "trust-text": "Sertai 500+ pengasas bukan teknikal yang membina dengan AI",
+        "footer-author": "Oleh Viacheslav Zgordan",
+        "footer-consult": "Perundingan",
+        "footer-privacy": "Privasi"
     },
     id: {
         "nav-method": "Metode",
@@ -342,7 +354,10 @@ const translations = {
         "cta-footer": "Pembayaran aman melalui Lava.top",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "Bergabunglah dengan 500+ founder non-teknis yang membangun dengan AI"
+        "trust-text": "Bergabunglah dengan 500+ founder non-teknis yang membangun dengan AI",
+        "footer-author": "Oleh Viacheslav Zgordan",
+        "footer-consult": "Konsultasi",
+        "footer-privacy": "Privasi"
     },
     "zh-CN": {
         "nav-method": "方法论",
@@ -411,7 +426,10 @@ const translations = {
         "cta-footer": "通过 Lava.top 安全支付",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "加入 500+ 位正在使用 AI 构建产品的非技术创始人行列"
+        "trust-text": "加入 500+ 位正在使用 AI 构建产品的非技术创始人行列",
+        "footer-author": "作者：Viacheslav Zgordan",
+        "footer-consult": "咨询服务",
+        "footer-privacy": "隐私政策"
     },
     "zh-TW": {
         "nav-method": "方法論",
@@ -480,7 +498,10 @@ const translations = {
         "cta-footer": "透過 Lava.top 安全支付",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "加入 500+ 位正在使用 AI 構建產品的非技術創辦人行列"
+        "trust-text": "加入 500+ 位正在使用 AI 構建產品的非技術創辦人行列",
+        "footer-author": "作者：Viacheslav Zgordan",
+        "footer-consult": "諮詢服務",
+        "footer-privacy": "隱私政策"
     },
     te: {
         "nav-method": "పద్ధతి",
@@ -549,7 +570,10 @@ const translations = {
         "cta-footer": "Lava.top ద్వారా సురక్షిత చెల్లింపు",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "AIతో నిర్మిస్తున్న 500+ నాన్-టెక్నికల్ ఫౌండర్లతో చేరండి"
+        "trust-text": "AIతో నిర్మిస్తున్న 500+ నాన్-టెక్నికల్ ఫౌండర్లతో చేరండి",
+        "footer-author": "రచయిత: Viacheslav Zgordan",
+        "footer-consult": "కన్సల్టింగ్",
+        "footer-privacy": "గోప్యత"
     },
     ml: {
         "nav-method": "രീതി",
@@ -618,7 +642,10 @@ const translations = {
         "cta-footer": "Lava.top വഴി സുരക്ഷിതമായ പേയ്‌മെന്റ്",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "AI ഉപയോഗിച്ച് നിർമ്മിക്കുന്ന 500-ലധികം നോൺ-ടെക്നിക്കൽ ഫൗണ്ടർമാരോടൊപ്പം ചേരൂ"
+        "trust-text": "AI ഉപയോഗിച്ച് നിർമ്മിക്കുന്ന 500-ലധികം നോൺ-ടെക്നിക്കൽ ഫൗണ്ടർമാരോടൊപ്പം ചേരൂ",
+        "footer-author": "രചയിതാവ്: Viacheslav Zgordan",
+        "footer-consult": "കൺസൾട്ടിംഗ്",
+        "footer-privacy": "സ്വകാര്യത"
     },
     ta: {
         "nav-method": "வழிமுறை",
@@ -687,7 +714,10 @@ const translations = {
         "cta-footer": "Lava.top மூலம் பாதுகாப்பான கட்டணம்",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "AI மூலம் உருவாக்கி வரும் 500+ தொழில்நுட்பம் சாரா நிறுவனர்களுடன் இணையுங்கள்"
+        "trust-text": "AI மூலம் உருவாக்கி வரும் 500+ தொழில்நுட்பம் சாரா நிறுவனர்களுடன் இணையுங்கள்",
+        "footer-author": "ஆசிரியர்: Viacheslav Zgordan",
+        "footer-consult": "ஆலோசனை",
+        "footer-privacy": "தனியுரிமை"
     },
     kn: {
         "nav-method": "ವಿಧಾನ",
@@ -756,7 +786,10 @@ const translations = {
         "cta-footer": "Lava.top ಮೂಲಕ ಸುರಕ್ಷಿತ ಪಾವತಿ",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "AI ನೊಂದಿಗೆ ನಿರ್ಮಿಸುತ್ತಿರುವ 500+ ನಾನ್-ಟೆಕ್ನಿಕಲ್ ಫೌಂಡರ್‌ಗಳೊಂದಿಗೆ ಸೇರಿ"
+        "trust-text": "AI ನೊಂದಿಗೆ ನಿರ್ಮಿಸುತ್ತಿರುವ 500+ ನಾನ್-ಟೆಕ್ನಿಕಲ್ ಫೌಂಡರ್‌ಗಳೊಂದಿಗೆ ಸೇರಿ",
+        "footer-author": "ಲೇಖಕ: Viacheslav Zgordan",
+        "footer-consult": "ಸಲಹಾ ಸೇವೆ",
+        "footer-privacy": "ಗೌಪ್ಯತೆ"
     },
     tl: {
         "nav-method": "Paraan",
@@ -825,6 +858,9 @@ const translations = {
         "cta-footer": "Ligtas na pagbabayad sa pamamagitan ng Lava.top",
         "cta-price": "$5<span>.00</span>",
         "cta-price-original": "$20",
-        "trust-text": "Sumali sa 500+ non-technical founders na nagbu-build gamit ang AI"
+        "trust-text": "Sumali sa 500+ non-technical founders na nagbu-build gamit ang AI",
+        "footer-author": "Ni Viacheslav Zgordan",
+        "footer-consult": "Konsultasyon",
+        "footer-privacy": "Patakaran sa Privacy"
     }
 };
