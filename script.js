@@ -61,9 +61,7 @@ function applyTranslations() {
         }
     });
 
-    // Sync Language Selector
-    const langSelect = document.getElementById('lang-select');
-    if (langSelect) langSelect.value = lang;
+
 
     // Localized Buy Buttons
     updateBuyButtons(lang);
