@@ -127,9 +127,9 @@ function initCountdown() {
             if (priceBanner) priceBanner.style.background = "#450A0A"; // Darker warning red
 
             if (lang === 'en') {
-                if (bannerText) bannerText.textContent = "Current Price: $75. Join the elite founders.";
+                if (bannerText) bannerText.textContent = "Current Price: $50. Join the elite founders.";
                 const ctaPrice = document.getElementById('cta-price');
-                if (ctaPrice) ctaPrice.innerHTML = "$75<span>.00</span>";
+                if (ctaPrice) ctaPrice.innerHTML = "$50<span>.00</span>";
             } else {
                 if (bannerText) bannerText.textContent = "Current Price: $20. Join the elite founders.";
                 const ctaPrice = document.getElementById('cta-price');
