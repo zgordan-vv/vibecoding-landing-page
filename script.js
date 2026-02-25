@@ -126,7 +126,7 @@ function initCountdown() {
             clearInterval(x);
             if (priceBanner) priceBanner.style.background = "#450A0A"; // Darker warning red
 
-            if (lang === 'en') {
+            if (lang === 'en' || lang === 'ru') {
                 if (bannerText) bannerText.textContent = "Current Price: $50. Join the elite founders.";
                 const ctaPrice = document.getElementById('cta-price');
                 if (ctaPrice) ctaPrice.innerHTML = "$50<span>.00</span>";
