@@ -144,7 +144,10 @@ function initCountdown() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        if (countdownEl) countdownEl.textContent = ` — ${days}d ${hours}h ${minutes}m ${seconds}s left`;
+        if (countdownEl) {
+            const daysTxt = days > 0 ? `${days}d ` : "";
+            countdownEl.textContent = ` — ${daysTxt}${hours}h ${minutes}m ${seconds}s left`;
+        }
     };
 
     const x = setInterval(updateTimer, 1000);
@@ -166,14 +169,20 @@ const lavaLinks = {
 
 function updateBuyButtons(lang) {
     const url = lavaLinks[lang] || lavaLinks['en'];
+    // PREMIUM markets: English and Russian (Scroll to Pricing)
+    // IMPULSE markets: All others (Direct to Checkout)
+    const isImpulseMarket = (lang !== 'en' && lang !== 'ru');
+
     document.querySelectorAll('.buy-btn').forEach(btn => {
-        // Only update if it's an anchor tag leading to checkout (some buy-btns might be scroll anchors)
-        if (btn.tagName === 'A' && (btn.id === 'lead-submit-btn' || btn.classList.contains('final-btn-link'))) {
-            btn.href = url;
+        if (btn.tagName === 'A') {
+            // Bypass scroll for impulse markets only
+            if (isImpulseMarket || btn.id === 'lead-submit-btn' || btn.classList.contains('final-btn-link')) {
+                btn.href = url;
+            }
         }
     });
 
-    // Specific fix for the main CTA button if it's not caught
+    // Main CTA Link
     const mainBtn = document.getElementById('lead-submit-btn');
     if (mainBtn) mainBtn.href = url;
 }
