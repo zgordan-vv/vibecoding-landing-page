@@ -104,6 +104,11 @@ function applyTranslations() {
     }
 
     document.documentElement.setAttribute('lang', lang);
+
+    // Update book reader if it exists
+    if (typeof updateReader === 'function') {
+        updateReader(lang);
+    }
 }
 
 // 2. PRICING ENGINE & COUNTDOWN
@@ -268,6 +273,71 @@ function initFAQ() {
     });
 }
 
+// 5. BOOK READER ENGINE
+let currentPageIndex = 0;
+
+function updateReader(lang) {
+    const contentEl = document.getElementById('reader-content');
+    const tabsContainer = document.getElementById('reader-tabs');
+    const pageNumEl = document.getElementById('actual-page-num');
+    const sampleData = bookSamples[lang] || bookSamples['en'];
+
+    if (!contentEl || !sampleData || !tabsContainer) return;
+
+    // Inject Tabs dynamically
+    tabsContainer.innerHTML = '';
+    sampleData.pages.forEach((page, index) => {
+        const btn = document.createElement('button');
+        btn.className = `reader-tab ${index === currentPageIndex ? 'active' : ''}`;
+        btn.textContent = page.label;
+        btn.onclick = () => {
+            currentPageIndex = index;
+            updateReader(lang);
+        };
+        tabsContainer.appendChild(btn);
+    });
+
+    // Handle case where currentPageIndex is out of bounds
+    if (currentPageIndex >= sampleData.pages.length) {
+        currentPageIndex = 0;
+    }
+
+    const currentPageObject = sampleData.pages[currentPageIndex];
+    if (currentPageObject) {
+        contentEl.innerHTML = currentPageObject.content;
+        contentEl.scrollTop = 0;
+        if (pageNumEl) pageNumEl.textContent = currentPageObject.number;
+    }
+}
+
+function initReader() {
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    const lang = getSelectedLanguage();
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                updateReader(getSelectedLanguage());
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            const lang = getSelectedLanguage();
+            const maxPages = (bookSamples[lang] || bookSamples['en']).pages.length;
+            if (currentPageIndex < maxPages - 1) {
+                currentPageIndex++;
+                updateReader(getSelectedLanguage());
+            }
+        });
+    }
+
+    updateReader(lang);
+}
+
 // BOOTSTRAP
 // Run as early as possible to prevent flicker
 (function () {
@@ -280,4 +350,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initCheckout();
     initUI();
     initFAQ();
+    initReader();
 });
+

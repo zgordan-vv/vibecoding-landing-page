@@ -70,6 +70,7 @@
             <nav>
                 <div class="nav-links">
                     <a href="#about" id="nav-method">The Method</a>
+                    <a href="#sample" id="nav-sample">Free Sample</a>
                     <a href="#stack" id="nav-stack">The Stack</a>
 
                 </div>
@@ -267,29 +268,39 @@
             </div>
         </div>
 
-        <!-- PREVIEW SECTION -->
-        <section class="preview-section">
+        <!-- BOOK SAMPLE SECTION -->
+        <section id="sample" class="sample-section">
             <div class="container">
-                <h2 class="section-title text-center" id="preview-title">Take a look inside</h2>
-                <div class="preview-grid">
-                    <div class="preview-card reveal">
-                        <img src="assets/preview-prd.webp" alt="PRD Section" class="preview-img">
-                        <div class="preview-content">
-                            <h3 id="preview-1-title">Chapter 6: Idea to PRD</h3>
-                            <p id="preview-1-desc">Learn how to translate your vague vision into a technical blueprint
-                                that AI understands
-                                perfectly. No developer degree required.</p>
+                <div class="section-badge text-center" id="sample-badge">Free Preview</div>
+                <h2 class="section-title text-center" id="sample-title">Start reading right now</h2>
+                <p class="section-subtitle text-center" id="sample-subtitle">Glimpse into the system that builds MVPs in
+                    a weekend.</p>
+
+                <div class="reader-container glass reveal">
+                    <div class="reader-sidebar">
+                        <div class="reader-tabs" id="reader-tabs">
+                            <!-- Tabs will be injected by script.js -->
                         </div>
                     </div>
-                    <div class="preview-card reveal">
-                        <img src="assets/preview-live.webp" alt="Going Live" class="preview-img">
-                        <div class="preview-content">
-                            <h3 id="preview-2-title">Chapter 12: Going Live</h3>
-                            <p id="preview-2-desc">Step-by-step instructions on deploying your app to a real URL. We
-                                cover the environment
-                                variables and server settings so you don't fail at the finish line.</p>
+                    <div class="reader-main">
+                        <div class="reader-content" id="reader-content">
+                            <!-- Page content injected by script.js -->
+                        </div>
+                        <div class="reader-footer">
+                            <div class="reader-pagination" id="reader-pagination">
+                                Book Page: <span id="actual-page-num">1</span>
+                            </div>
+                            <div class="reader-nav">
+                                <button class="btn btn-sm btn-outline" id="prev-page">←</button>
+                                <button class="btn btn-sm btn-outline" id="next-page">→</button>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#pricing" class="btn btn-primary buy-btn" id="sample-cta">Get the full book to continue
+                        →</a>
                 </div>
             </div>
         </section>
@@ -508,6 +519,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 
     <script src="translations.js"></script>
+    <script src="book-sample.js"></script>
     <script src="script.js"></script>
 </body>
 
