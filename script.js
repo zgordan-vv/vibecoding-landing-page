@@ -31,10 +31,9 @@ function getSelectedLanguage() {
         return urlLang;
     }
 
-    const savedLang = localStorage.getItem('vibecoding_lang');
-    if (savedLang) return savedLang;
-
-    // Default to English
+    // Don't use savedLang by default to avoid getting "stuck" in a language
+    // only use it if we want to implement a language switcher later.
+    // For now, always default to English on pure root visits.
     return 'en';
 }
 
