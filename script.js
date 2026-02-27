@@ -70,19 +70,19 @@ function applyTranslations() {
     const bookContent = document.querySelector('.book-content');
     const bookBg = document.querySelector('.book-bg-image');
     const localizedCovers = {
-        'vi': 'assets/cover-vi.png',
-        'id': 'assets/cover-id.png',
-        'ms': 'assets/cover-ms.png',
-        'zh-CN': 'assets/cover-zh-cn.png',
-        'zh-TW': 'assets/cover-zh-tw.png',
-        'en': 'assets/cover-en.png' // Use PNG for English if available
+        'vi': 'assets/cover-vi.webp',
+        'id': 'assets/cover-id.webp',
+        'ms': 'assets/cover-ms.webp',
+        'zh-CN': 'assets/cover-zh-cn.webp',
+        'zh-TW': 'assets/cover-zh-tw.webp',
+        'en': 'assets/cover-en.webp' // Use WebP for English
     };
 
     console.log('Applying cover for lang:', lang);
 
     if (bookBg) {
         if (localizedCovers[lang]) {
-            console.log('Using PNG cover:', localizedCovers[lang]);
+            console.log('Using WebP cover:', localizedCovers[lang]);
             bookBg.style.backgroundImage = `url('${localizedCovers[lang]}')`;
             if (bookContent) {
                 bookContent.style.setProperty('opacity', '0', 'important');
@@ -90,7 +90,7 @@ function applyTranslations() {
             }
         } else {
             console.log('Using HTML cover for:', lang);
-            bookBg.style.backgroundImage = `url('assets/cover-bg.png')`;
+            bookBg.style.backgroundImage = `url('assets/cover-bg.webp')`;
             if (bookContent) {
                 bookContent.style.setProperty('opacity', '1', 'important');
                 bookContent.style.pointerEvents = 'auto';
@@ -251,6 +251,24 @@ function initUI() {
     document.head.appendChild(style);
 }
 
+function initFAQ() {
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
 // BOOTSTRAP
 // Run as early as possible to prevent flicker
 (function () {
@@ -262,4 +280,5 @@ window.addEventListener('DOMContentLoaded', () => {
     initCountdown();
     initCheckout();
     initUI();
+    initFAQ();
 });

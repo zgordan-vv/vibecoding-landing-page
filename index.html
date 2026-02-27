@@ -14,7 +14,7 @@
     <meta property="og:title" content="Vibecoding: Build your MVP this weekend.">
     <meta property="og:description"
         content="Learn the system to build real apps with AI that you actually own. No agencies, no black boxes.">
-    <meta property="og:image" content="https://book.slavazgordan.help/og-image.png">
+    <meta property="og:image" content="https://book.slavazgordan.help/og-image.webp">
     <!-- Placeholder for future asset -->
 
     <!-- Fonts -->
@@ -119,6 +119,29 @@
         <div class="trust-bar">
             <div class="container text-center">
                 <span id="trust-text">Join 500+ non-technical founders building with AI</span>
+            </div>
+        </div>
+
+        <!-- STACK BAR (TRUST SIGNAL) -->
+        <div class="stack-bar"
+            style="padding: 40px 0; background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <p class="text-center" id="stack-title"
+                    style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); margin-bottom: 30px;">
+                    Built with Industry Standards</p>
+                <div
+                    style="display: flex; justify-content: center; align-items: center; gap: 60px; filter: brightness(0) invert(1) opacity(0.4); flex-wrap: wrap;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" height="30"
+                        alt="React">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" height="30"
+                        alt="Firebase">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" height="30"
+                        alt="Node.js">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Vercel_logo.svg" height="20"
+                        alt="Vercel">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-logo.svg" height="30"
+                        alt="GitHub">
+                </div>
             </div>
         </div>
 
@@ -244,32 +267,103 @@
             </div>
         </div>
 
+        <!-- PREVIEW SECTION -->
+        <section class="preview-section">
+            <div class="container">
+                <h2 class="section-title text-center" id="preview-title">Take a look inside</h2>
+                <div class="preview-grid">
+                    <div class="preview-card reveal">
+                        <img src="assets/preview-prd.webp" alt="PRD Section" class="preview-img">
+                        <div class="preview-content">
+                            <h3 id="preview-1-title">Chapter 6: Idea to PRD</h3>
+                            <p id="preview-1-desc">Learn how to translate your vague vision into a technical blueprint
+                                that AI understands
+                                perfectly. No developer degree required.</p>
+                        </div>
+                    </div>
+                    <div class="preview-card reveal">
+                        <img src="assets/preview-live.webp" alt="Going Live" class="preview-img">
+                        <div class="preview-content">
+                            <h3 id="preview-2-title">Chapter 12: Going Live</h3>
+                            <p id="preview-2-desc">Step-by-step instructions on deploying your app to a real URL. We
+                                cover the environment
+                                variables and server settings so you don't fail at the finish line.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title text-center" id="testimonials-title">What founders are saying</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">"I spent 6 months talking to agencies who quoted me $20k. Using
+                            Vibecoding, I had my first version live in 48 hours for the price of this book."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Marcus T.</h4>
+                                <span>E-commerce Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">"The Master-Slide system is a game changer. I finally understand how
+                            to keep the AI from making a mess of my codebase. Highest ROI purchase this year."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Sarah L.</h4>
+                                <span>Product Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">"As a non-technical person, I was terrified of the terminal.
+                            Viacheslav's guide makes it feel like following a Lego instruction manual."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>David R.</h4>
+                                <span>Solopreneur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- AUTHOR SECTION -->
         <section id="author" class="author-section">
             <div class="container">
-                <div class="author-grid">
-                    <div class="author-stats">
-                        <div class="stat-card reveal">
-                            <span class="stat-val" id="author-stat-1-val">10</span>
-                            <span class="stat-label" id="author-stat-1-label">Years of Dev</span>
-                        </div>
-                        <div class="stat-card reveal">
-                            <span class="stat-val" id="author-stat-2-val">40+</span>
-                            <span class="stat-label" id="author-stat-2-label">IT Projects</span>
-                        </div>
-                        <div class="stat-card reveal">
-                            <span class="stat-val" id="author-stat-3-val">16</span>
-                            <span class="stat-label" id="author-stat-3-label">Apps from Scratch</span>
-                        </div>
-                        <div class="stat-card reveal">
-                            <span class="stat-val" id="author-stat-4-val">100%</span>
-                            <span class="stat-label" id="author-stat-4-label">Success Rate</span>
-                        </div>
-                    </div>
-                    <div class="author-bio">
+                <div class="author-card reveal"
+                    style="max-width: 900px; margin: 0 auto; background: var(--bg-surface); border: var(--border-glass); padding: 60px; border-radius: 32px;">
+                    <div class="author-bio text-center">
                         <span class="subheading" id="author-subheading">I build products without developers.</span>
-                        <h2 id="author-heading">Meet Viacheslav Zgordan</h2>
-                        <div id="author-text" class="author-description">
+                        <h2 id="author-heading" style="font-size: 3.5rem; margin-bottom: 30px;">Meet Viacheslav Zgordan
+                        </h2>
+
+                        <div class="author-stats"
+                            style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 40px;">
+                            <div class="stat-card">
+                                <span class="stat-val" id="author-stat-1-val">10+</span>
+                                <span class="stat-label" id="author-stat-1-label">Years Exp</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-val" id="author-stat-2-val">40+</span>
+                                <span class="stat-label" id="author-stat-2-label">IT Projects</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-val" id="author-stat-3-val">16</span>
+                                <span class="stat-label" id="author-stat-3-label">Apps Built</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-val" id="author-stat-4-val">100%</span>
+                                <span class="stat-label" id="author-stat-4-label">Success</span>
+                            </div>
+                        </div>
+
+                        <div id="author-text" class="author-description" style="max-width: 700px; margin: 0 auto;">
                             <p>For the past 10 years, I’ve been the person who takes an idea and turns it into a real
                                 product people can use. I help entrepreneurs and product managers build software
                                 products without hiring expensive development teams.</p>
@@ -278,21 +372,17 @@
                                 $150K to build an MVP. I'm here to show you the <strong>Third Way</strong>: AI-assisted
                                 product building. I've personally participated in 40+ IT projects and developed
                                 everything from corporate chats to complex machine learning applications.</p>
-
-                            <p>I don't just teach syntax. I teach founders to turn ideas into working products in days,
-                                not months.</p>
                         </div>
-                        <div class="author-footer">
-                            <div class="tech-tags">
+                        <div class="author-footer" style="align-items: center;">
+                            <div class="tech-tags" style="justify-content: center;">
                                 <span class="tech-tag">LlamaIndex</span>
                                 <span class="tech-tag">LangChain</span>
                                 <span class="tech-tag">RAG</span>
-                                <span class="tech-tag">Golang</span>
                                 <span class="tech-tag">React</span>
                                 <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Vibecoding</span>
                             </div>
-                            <div class="author-links">
+                            <div class="author-links" style="justify-content: center; margin-top: 30px;">
                                 <a href="https://linkedin.com/in/vvzgordan" target="_blank" class="linkedin-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="currentColor">
@@ -305,7 +395,7 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="currentColor">
                                         <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-60.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                     GitHub
                                 </a>
@@ -325,6 +415,50 @@
             </div>
         </div>
 
+        <!-- FAQ SECTION -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title text-center" id="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item reveal">
+                        <button class="faq-question" id="faq-1-q">Do I need any coding experienced?</button>
+                        <div class="faq-answer">
+                            <p id="faq-1-a">None at all. This guide is written specifically for non-technical founders.
+                                If you can
+                                use a browser and follow a recipe, you can build an app with this method.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question" id="faq-2-q">How much will the tools cost me?</button>
+                        <div class="faq-answer">
+                            <p id="faq-2-a">Every tool we use has a generous free tier. You can build and launch your
+                                first MVP with
+                                $0 in software costs. Later, as you scale, you might choose to pay for premium features
+                                (Cursor is $20/mo).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question" id="faq-3-q">Is the code really mine?</button>
+                        <div class="faq-answer">
+                            <p id="faq-3-a">Yes. Unlike "no-code" builders where your app is locked on their platform,
+                                this method
+                                gives you a standard React codebase. You own the files, the data, and the deployment.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question" id="faq-4-q">Can I build an iOS/Android app too?</button>
+                        <div class="faq-answer">
+                            <p id="faq-4-a">We start with a Web App because it's the fastest way to launch. However, the
+                                exact same
+                                "Vibecoding" principles apply to mobile development, and we include a section on how to
+                                transition later.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CHECKOUT SECTION -->
         <section id="pricing" class="cta-section">
             <div class="container text-center">
@@ -342,7 +476,15 @@
                             id="lead-submit-btn" class="btn btn-primary btn-xl shadow-glow buy-btn"
                             style="width: 100%; max-width: 400px; display: inline-block;">Get Instant Access</a>
                     </div>
-                    <p class="small" id="cta-footer">Secure payment via Lava.top</p>
+
+                    <div class="guarantee-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                        <span id="guarantee-text">100% Satisfaction Guarantee</span>
+                    </div>
+                    <p class="small" id="cta-footer" style="margin-top: 15px;">Secure payment via Lava.top</p>
                 </div>
             </div>
         </section>
