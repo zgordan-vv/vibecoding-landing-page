@@ -69,12 +69,15 @@ function applyTranslations() {
     const bookContent = document.querySelector('.book-content');
     const bookBg = document.querySelector('.book-bg-image');
     const localizedCovers = {
+        'en': 'assets/cover-en.webp',
+        'ru': 'assets/cover-ru.webp',
         'vi': 'assets/cover-vi.webp',
         'id': 'assets/cover-id.webp',
         'ms': 'assets/cover-ms.webp',
+        'ta': 'assets/cover-ta.webp',
+        'te': 'assets/cover-te.webp',
         'zh-CN': 'assets/cover-zh-cn.webp',
         'zh-TW': 'assets/cover-zh-tw.webp',
-        'en': 'assets/cover-en.webp' // Use WebP for English
     };
 
     console.log('Applying cover for lang:', lang);
