@@ -94,7 +94,7 @@ h3,
 
 /* 3. NAVIGATION */
 header {
-    padding: 48px 0 12px 0;
+    padding: 64px 0 12px 0;
     position: relative;
     z-index: 10;
 }
@@ -1215,10 +1215,12 @@ footer {
 
 .nav-desktop-btn {
     display: block;
+    margin-top: 16px;
 }
 
 .nav-mobile-btn {
     display: none;
+    margin-top: 16px;
 }
 
 /* 13. TRUST BAR & EXTRA GLOW */
