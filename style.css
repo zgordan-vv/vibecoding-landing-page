@@ -168,7 +168,9 @@ header {
 
 /* 4. BUTTONS */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 24px;
     border-radius: 50px;
     font-weight: 700;
@@ -176,6 +178,7 @@ header {
     transition: var(--smooth);
     cursor: pointer;
     border: none;
+    text-align: center;
 }
 
 .btn-primary {
@@ -1212,12 +1215,10 @@ footer {
 
 .nav-desktop-btn {
     display: block;
-    margin-top: 4px;
 }
 
 .nav-mobile-btn {
     display: none;
-    margin-top: 4px;
 }
 
 /* 13. TRUST BAR & EXTRA GLOW */
