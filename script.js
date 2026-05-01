@@ -116,7 +116,7 @@ function applyTranslations() {
 
 // 2. PRICING ENGINE & COUNTDOWN
 function initCountdown() {
-    const deadline = new Date("March 1, 2026 00:00:00").getTime();
+    const deadline = new Date("June 1, 2026 00:00:00").getTime();
     const countdownEl = document.getElementById('countdown');
     const priceBanner = document.getElementById('price-banner');
     const bannerText = document.getElementById('banner-text');
@@ -126,23 +126,17 @@ function initCountdown() {
         const distance = deadline - now;
 
         // THE PRICE FLIP
-        const lang = getSelectedLanguage();
         if (distance < 0) {
             clearInterval(x);
             if (priceBanner) priceBanner.style.background = "#450A0A"; // Darker warning red
 
-            if (lang === 'en' || lang === 'ru') {
-                if (bannerText) bannerText.textContent = "Current Price: $25. Join the elite founders.";
-                const ctaPrice = document.getElementById('cta-price');
-                if (ctaPrice) ctaPrice.innerHTML = "$25<span>.00</span>";
-                const ctaOriginal = document.getElementById('cta-price-original');
-                if (ctaOriginal) ctaOriginal.textContent = "$50";
-            } else {
-                if (bannerText) bannerText.textContent = "Current Price: $20. Join the elite founders.";
-                const ctaPrice = document.getElementById('cta-price');
-                if (ctaPrice) ctaPrice.innerHTML = "$20<span>.00</span>";
-                const ctaOriginal = document.getElementById('cta-price-original');
-                if (ctaOriginal) ctaOriginal.textContent = "$50";
+            if (bannerText) bannerText.textContent = "Current Price: $50. Join the elite founders.";
+            const ctaPrice = document.getElementById('cta-price');
+            if (ctaPrice) ctaPrice.innerHTML = "$50<span>.00</span>";
+            const ctaOriginal = document.getElementById('cta-price-original');
+            if (ctaOriginal) {
+                ctaOriginal.textContent = "";
+                ctaOriginal.style.display = "none";
             }
             if (countdownEl) countdownEl.textContent = "";
             return;
